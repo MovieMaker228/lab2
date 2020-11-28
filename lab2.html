@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 2 ITex</title>
+        <style>
+            body {
+                background-color:#BC8F8F;
+            }
+            
+            .Color{
+                top: 20;
+                background: rgb(123, 129, 114);
+                width: 70px;
+                height: 60px;
+                transition: .5s;
+            }
+
+            #check:checked ~ .Color{
+                background: yellow;
+            }
+
+            P { 
+             font-size:25px;/* Обычный абзац */ 
+             text-align: justify; /* Выравнивание текста по ширине */
+            } 
+
+            P.class { /* Абзац с классом cite */
+             color: navy; /* Цвет текста */
+             margin-left: 20px; /* Отступ слева */
+             border-left: 1px solid navy; /* Граница слева от текста */
+             padding-left: 15px; /* Расстояние от линии до текста */
+            } 
+
+            #help {
+                    position: absolute; /* Абсолютное позиционирование */
+                    right: 0; /* Положение элемента от правого края */
+                    top: 20px; /* Положение от верхнего края */
+                    width: 225px; /* Ширина блока */
+                    padding: 5px; /* Поля вокруг текста */
+                    background: rgb(104, 139, 113); /* Цвет фона */                   
+                }
+
+            div.relative{
+                        font-size:50px;
+                        width: 500px;
+                        height: 200px;
+                        position: relative;
+                        top: 20px; /* Положение от верхнего края */
+                        right: 10px; /* Положение элемента от правого края */
+                        left: 100px;
+                        background: rgb(104, 139, 113); /* Цвет фона */ 
+            }
+
+            .container {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        width: 820px;
+                        height: 200px;
+                        flex-basis: auto;
+                        background: white;
+            }    
+
+            .contitem{
+                font-size:25px;
+                width: 50px;
+                height: 75px;
+            }
+
+           </style>
+       <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+
+        <h1>Лабораторная работа №2</h1> 
+
+        <h2 class="useclass">Проверка классов</h2>      
+        <h3>Вариант №0</h3>
+        <hr>
+        <center>
+        <table>
+            <tr>
+                <td>Прогноз погоды</td>
+                <td>Температура</td>
+                <td>Влажность</td>
+                <td>Количество осадков</td>
+            </tr>
+            <tr>
+                <td>Январь</td>
+                <td>От-10&deg; до+2С&deg;</td>
+                <td>1110 g/m3</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Февраль</td>
+                <td>&deg;С до &deg;С</td>
+                <td>800 g/m3</td>
+                <td>700</td>
+            </tr>
+            <tr>
+                <td>Март</td>
+                <td>&deg;С до &deg;С</td>
+                <td>900 g/m3</td>
+                <td>600</td>
+            </tr>
+        </table>
+        </center>
+        <hr>
+
+        <p style= " color:green; font-size:25px">Это выделенный абзац текста.</p>
+
+        <p>Используя селекторы CLASS и ID, <p class="class">показать использование стилей</p> (например, для форматирование шрифта, текста, изменения фона документа и т.д.)</p>
+
+       <div id="help">Пример использования ID</div>
+
+       <div class="relative">Пример относительного позиционирования</div>
+
+        <div style="float: left;font-size:25px;background: #fd0;border: 1px solid black;padding: 10px; margin-right: 20px;">Пример обтекания</div>
+        <div style="font-size:25px">Текста</div>
+
+        <input type="checkbox" id="check"/>
+        <div class="Color"></div>
+
+        <div class="container">
+            <div class="contitem"style="background:green;">1</div>
+            <div class="contitem"style="background:orange">2</div>
+            <div class="contitem"style="background:orange">3</div>
+            <div class="contitem"style="background:orange">4</div>
+            <div class="contitem"style="background:orange">5</div>
+            <div class="contitem"style="background:orange">6</div>
+            <div class="contitem"style="background:orange">7</div>
+            <div class="contitem"style="background:orange;width: 70px; height: 75px;">8</div>
+            <div class="contitem"style="background:green; width: 800px;">9</div>           
+          </div>
+</html>
+
+    
